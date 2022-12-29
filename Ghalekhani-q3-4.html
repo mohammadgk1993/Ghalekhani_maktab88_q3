@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul {
+                list-style: none;
+                border: 1px solid black;
+                padding: 0;
+                width: 20%;
+            }
+
+            li {
+                border: 1px solid black;
+                padding: 1%;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" value="">
+
+        <ul>
+            <li class="show">a</li>
+            <li class="show">b</li>
+            <li class="show">c</li>
+            <li class="show">c</li>
+            <li class="show">arman</li>
+            <li class="show">armin</li>
+            <li class="show">hello world</li>
+        </ul>
+
+        <script>
+            document.querySelector('input').addEventListener('input',function () {
+                for (let i of document.querySelectorAll('li')) {
+                    if (this.value != i.innerText.slice(0,this.value.length)) {
+                        i.style.display = 'none'
+                    }
+                    if (this.value == i.innerText.slice(0,this.value.length)) {
+                        i.style.display = 'block'
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

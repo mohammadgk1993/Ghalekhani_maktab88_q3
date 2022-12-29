@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+<div class="w3-container">
+
+<h2>Dynamic Progress Bar with Labels</h2>
+<p>Centered label:</p>
+
+<div class="w3-light-grey">
+  <div id="myBar" class="w3-container w3-green w3-center" style="width:10%">10%</div>
+</div>
+<br>
+<button class="w3-button w3-green" onclick="move()">add 10%</button> 
+
+</div>
+
+<script>
+let width = 10
+
+function move() {
+if (width == 100) {
+return
+}
+  let elem = document.getElementById("myBar");   
+  
+  width += 10; 
+  elem.style.width = width + '%'; 
+  elem.innerHTML = width * 1  + '%';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input {
+                width: 30%;
+                padding: 0.5%;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" value="">
+        <script>
+            document.querySelector('input').addEventListener('input',function () {
+                if (this.value.includes('.')) {
+                    this.value = this.value.replace('.','_')
+                };
+                if (this.value.includes('-')) {
+                    this.value = this.value.replace('-','_')
+                }
+            })
+        </script>
+    </body>
+</html>
