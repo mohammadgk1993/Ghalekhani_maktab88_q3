@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            #change {
+                width: 50%;
+                background-color: rgb(63, 63, 63);
+                color: white;
+                border-radius: 5px;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                padding:  1%;
+            }
+
+            button {
+                font-size: 20px;
+                padding: 2%;
+                border-radius: 5px;
+                margin:2%;
+            }
+
+            .dark {
+                background-color: rgb(63, 63, 63);
+                color: white; 
+            }
+
+            .light {
+                background-color: rgb(183, 183, 183);
+                color: black;
+            }
+
+            .btn {
+                display: flex;
+                flex-direction: row;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "change">
+            <h1>Dark Mode</h1>
+            <p>Google's service, offered free of charge, instantly translates words, phrases, and web pages between
+                 English and over 100 other languages. Google's service, offered free of charge, instantly
+                  translates words, phrases, and web pages between English and over 100 other languages. Google's
+                   service, offered free of charge, instantly translates words, phrases, and web pages between
+                    English and over 100 other languages.</p>
+        </div>
+        
+        <div class="btn">
+            <button onclick="light()" class="light">Light Mode</button>
+            <button onclick="dark()" class="dark">Dark Mode</button>
+        </div>
+
+        <script>
+            function light() {
+                document.querySelector('div').style.backgroundColor = "rgb(183, 183, 183)"
+                document.querySelector('div').style.color = "black"
+            }
+
+            function dark() {
+                document.querySelector('div').style.backgroundColor = "rgb(63, 63, 63)"
+                document.querySelector('div').style.color = "white"
+            }
+        </script>
+    </body>
+</html>
